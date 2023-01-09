@@ -22,7 +22,7 @@ In the app you can create challenges for yourself. You can also set a deadline f
 My target groups are young people and writers who suffer from procrastination.
 
 ## Oude ontwerp
-Ik wil deze prototype verbeteren: [https://xd.adobe.com/view/8d387ec2-65e4-43cf-8a6c-6908b799fb96-d86b/](https://xd.adobe.com/view/8d387ec2-65e4-43cf-8a6c-6908b799fb96-d86b/)
+Ik wil deze prototype verbeteren die ik in een vorige opleiding had gemaakt: [https://xd.adobe.com/view/8d387ec2-65e4-43cf-8a6c-6908b799fb96-d86b/](https://xd.adobe.com/view/8d387ec2-65e4-43cf-8a6c-6908b799fb96-d86b/)
 
 ## Wiki
 Bekijk de [wiki](https://github.com/DphnZwp/WriterMind/wiki) om meer te lezen over mijn project.
