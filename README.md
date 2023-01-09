@@ -12,12 +12,11 @@ The purpose of this website is to get more discipline to write. You can choose c
 Writer's block is the temporary inability of a writer or composer to write. 
 
 ## Challenges
+In the app you can create challenges for yourself. You can also set a deadline for yourself so that you know when your document must be completed.
 
-In the app you can create challenges for yourself. 
 ### Challenges
 * Setting how many words you want to write. Maximum and minimum number of words.
-
-You can also set a deadline for yourself so that you know when your document must be completed.
+* Create a story based on a genre or multiple genres.
 
 ## Doelgroep
 Mijn doelgroepen zijn jongeren en schrijvers die last hebben van uitstelgedrag.
