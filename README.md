@@ -4,7 +4,9 @@ De instructie vind je in: [docs/INSTRUCTIONS.md](docs/INSTRUCTIONS.md)
 
 # WriterMind 🖊️🧠
 ***Website against procrastination and writer’s block.***
+I'm going to improve an old design I made and make a website for the improved design. 
 
+What is WriterMind
 The purpose of this website is to get more discipline to write. You can choose challenges for your documents to get you in the right mindspace and get your work done. You can use the app for writing books, homework or other projects where you need to write.
 
 ## Writer’s Block
