@@ -6,6 +6,9 @@ De instructie vind je in: [docs/INSTRUCTIONS.md](docs/INSTRUCTIONS.md)
 ***Website against procrastination and writer’s block.***
 I'm going to improve my old design for WriterMind and then make a website from the improved design.
 
+## Oude ontwerp
+Ik wil deze prototype verbeteren die ik in een vorige opleiding had gemaakt: [https://xd.adobe.com/view/8d387ec2-65e4-43cf-8a6c-6908b799fb96-d86b/](https://xd.adobe.com/view/8d387ec2-65e4-43cf-8a6c-6908b799fb96-d86b/)
+
 What is WriterMind
 The purpose of this website is to get more discipline to write. You can choose challenges for your documents to get you in the right mindspace and get your work done. You can use the app for writing books, homework or other projects where you need to write.
 
@@ -23,8 +26,7 @@ In the app you can create challenges for yourself. You can also set a deadline f
 ## Doelgroep
 My target groups are young people and writers who suffer from procrastination.
 
-## Oude ontwerp
-Ik wil deze prototype verbeteren die ik in een vorige opleiding had gemaakt: [https://xd.adobe.com/view/8d387ec2-65e4-43cf-8a6c-6908b799fb96-d86b/](https://xd.adobe.com/view/8d387ec2-65e4-43cf-8a6c-6908b799fb96-d86b/)
+
 
 ## Wiki
 Bekijk de [wiki](https://github.com/DphnZwp/WriterMind/wiki) om meer te lezen over mijn project.
