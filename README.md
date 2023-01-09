@@ -19,7 +19,7 @@ In the app you can create challenges for yourself. You can also set a deadline f
 * Create a story based on a genre or multiple genres.
 
 ## Doelgroep
-Mijn doelgroepen zijn jongeren en schrijvers die last hebben van uitstelgedrag.
+My target groups are young people and writers who suffer from procrastination.
 
 ## Wiki
 Bekijk de [wiki](https://github.com/DphnZwp/WriterMind/wiki) om meer te lezen over mijn project.
