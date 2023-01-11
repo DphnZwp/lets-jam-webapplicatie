@@ -4,7 +4,7 @@ De instructie vind je in: [docs/INSTRUCTIONS.md](docs/INSTRUCTIONS.md)
 
 # WriterMind 🖊️🧠
 ***Website against procrastination and writer’s block.***
-I'm going to improve my old design for WriterMind and then make a website from the improved 
+I'm going to improve my old design for WriterMind and then make a website from the improved design.
 
 ## Wiki
 Bekijk de [wiki](https://github.com/DphnZwp/WriterMind/wiki) om meer te lezen over mijn project.
