@@ -6,6 +6,12 @@ De instructie vind je in: [docs/INSTRUCTIONS.md](docs/INSTRUCTIONS.md)
 ***Website against procrastination and writer’s block.***
 I'm going to improve my old design for WriterMind and then make a website from the improved design.
 
+
+### Challenges
+* Setting how many words you want to write. Maximum and minimum number of words.
+
+You can also set a deadline for yourself so that you know when your document must be completed.
+
 ## Wiki
 Bekijk de [wiki](https://github.com/DphnZwp/WriterMind/wiki) om meer te lezen over mijn project.
 
