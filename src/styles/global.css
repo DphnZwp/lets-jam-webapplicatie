@@ -1,0 +1,38 @@
+:root {
+  --light-blue: #CFD3E9;
+  --red: #5C2A32;
+  --brown: #A3684A;
+  --black: #F2F3F9;
+  --white: #F2F3F9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--light-blue);
+}
+
+main {
+  padding: 4em;
+}
+
+h1,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: 'Aileron', sans-serif;
+  font-weight: 900;
+  font-size: 4rem;
+}
+
+p {
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
