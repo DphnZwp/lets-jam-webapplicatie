@@ -3,10 +3,12 @@
   --red: #5C2A32;
   --brown: #A3684A;
   --black: #F2F3F9;
+  --black: #000;
   --white: #F2F3F9;
 }
 
 * {
+  box-sizing: border-box; 
   margin: 0;
   padding: 0;
 }
@@ -27,12 +29,52 @@ p {
 }
 
 h1 {
-  font-family: 'Aileron', sans-serif;
+  font-family: 'Sriracha', cursive;
   font-weight: 900;
-  font-size: 4rem;
+  font-size: 5rem;
+  line-height: 1.1;
+}
+
+h2 {
+  font-family: 'Sriracha', cursive;
+  font-size: 2rem;
 }
 
 p {
   font-size: 1.5rem;
   line-height: 1.5;
+}
+
+.button--red {
+  padding: 1em;
+  color: var(--white);
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: var(--red);
+  border-radius: 10px;
+  display: block;
+  width: max-content;
+}
+
+.button--red:hover {
+  transition: 1s transform;
+  transform: translateY(-.35em);
+}
+
+.button--blue {
+  padding: 1em;
+  color: var(--black);
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: var(--light-blue);
+  border-radius: 10px;
+  display: block;
+  width: max-content;
+}
+
+.button--blue:hover {
+  transition: 1s transform;
+  transform: translateY(-.35em);
 }

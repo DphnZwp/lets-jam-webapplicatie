@@ -1,16 +1,22 @@
-<section class="notebook">
-  <article class="notebook-introduction">
+<article class="notebook">
+  <section class="notebook-introduction">
     <h1 class="notebook-introduction__heading">Fight against procrastination!</h1>
     <p>The purpose of this website is to get more discipline to write. You can choose challenges for your documents to get you in the right mindspace and get your work done. Create a document with a challenge when you're interested. Good luck!</p>
     <div class="notebook-introduction__button-group">
-      <a class="notebook-introduction__button" href="/">Let's write</a>
-      <a class="notebook-introduction__button" href="/">More information</a>
+      <a class="button--red" href="/">Let's write</a>
+      <a class="button--blue" href="/">More information</a>
     </div>
-  </article>
-  <article class="notebook-visual">
+    <div class="p">
+      <h2>Too lazy to login?</h2>
+      <p>You can write and download a document here. But keep in mind you cannot save your document when you are not logged in.</p>
+      <a class="button--red" href="/">Write here</a>
+    </div>
+  </section>
+
+  <section class="notebook-visual">
     <img src="/writing-visual.svg" alt="cddds">
-  </article>
-</section>
+  </section>
+</article>
 
 <style>
   .notebook {
@@ -20,7 +26,7 @@
   }
 
   .notebook-introduction {
-    padding: 6em;
+    padding: 3em;
     background-color: var(--white);
     border-top: 10px solid var(--brown);
     border-right: 7px solid var(--brown);
@@ -34,27 +40,15 @@
   }
 
   .notebook-visual {
-    padding: 6em;
+    padding: 3em;
     background-color: var(--white);
     border-top: 10px solid var(--brown);
     border-right: 10px solid var(--brown);
     border-bottom: 10px solid var(--brown);
     border-left: 7px solid var(--brown);
     border-radius: 1em;
-  }
-
-  .notebook-introduction__button {
-    padding: 1em;
-    color: var(--white);
-    text-decoration: none;
-    text-transform: uppercase;
-    background: var(--red);
-    border-radius: 10px;
-  }
-
-  .notebook-introduction__button:hover {
-    transition: 1s transform;
-    transform: translateY(-.35em);
+    display: flex;
+    align-items: center;
   }
 
   .notebook-introduction__button-group {
@@ -63,7 +57,13 @@
     gap: 1em;
   }
 
+  .p {
+    margin-top: 2em;
+    padding: 2em;
+    background-color: var(--light-blue);
+  }
+
   img {
-    width: 30em;
+    width: 100%;
   }
 </style>
