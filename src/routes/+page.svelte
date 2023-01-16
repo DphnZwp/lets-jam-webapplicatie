@@ -1,3 +1,7 @@
+<div class="p">
+  <img class="notebook-introduction-background" src="/book-holes.svg" alt="">
+</div>
+
 <article class="notebook">
   <section class="notebook-introduction">
     <h1 class="notebook-introduction__heading">Fight against procrastination!</h1>
@@ -6,15 +10,15 @@
       <a class="button--red" href="/">Let's write</a>
       <a class="button--blue" href="/">More information</a>
     </div>
-    <div class="p">
+    <div class="notebook-lazy">
       <h2>Too lazy to login?</h2>
-      <p>You can write and download a document here. But keep in mind you cannot save your document when you are not logged in.</p>
+      <p class="notebook-lazy__paragraph">You can write and download a document here. But keep in mind you cannot save your document when you are not logged in.</p>
       <a class="button--red" href="/">Write here</a>
     </div>
   </section>
 
   <section class="notebook-visual">
-    <img src="/writing-visual.svg" alt="cddds">
+    <img class="notebook-visual__image" src="/writing-visual.svg" alt="cddds">
   </section>
 </article>
 
@@ -57,13 +61,27 @@
     gap: 1em;
   }
 
-  .p {
+  .notebook-lazy {
     margin-top: 2em;
     padding: 2em;
     background-color: var(--light-blue);
   }
 
-  img {
+  .notebook-lazy__paragraph {
+    margin-bottom: .75em;
+  }
+
+  .notebook-introduction-background {
+    top: 25%;
+    position: absolute;
+  }
+
+  .notebook-visual__image {
     width: 100%;
+  }
+
+  .p {
+    display: flex;
+    justify-content: center;
   }
 </style>
