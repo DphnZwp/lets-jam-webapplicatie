@@ -1,26 +1,40 @@
-<div class="p">
-  <img class="notebook-introduction-background" src="/book-holes.svg" alt="">
-</div>
+<script lang="ts">
+  import Navigation from '$lib/components/Navigation.svelte'
+  import Link from '$lib/components/Link.svelte';
+  import ButtonLink from '$lib/components/ButtonLink.svelte';
+</script>
 
-<article class="notebook">
-  <section class="notebook-introduction">
-    <h1 class="notebook-introduction__heading">Fight against procrastination!</h1>
-    <p>The purpose of this website is to get more discipline to write. You can choose challenges for your documents to get you in the right mindspace and get your work done. Create a document with a challenge when you're interested. Good luck!</p>
-    <div class="notebook-introduction__button-group">
-      <a class="button--red" href="/">Let's write</a>
-      <a class="button--blue" href="/">More information</a>
-    </div>
-    <div class="notebook-lazy">
-      <h2>Too lazy to login?</h2>
-      <p class="notebook-lazy__paragraph">You can write and download a document here. But keep in mind you cannot save your document when you are not logged in.</p>
-      <a class="button--red" href="/">Write here</a>
-    </div>
-  </section>
+<Navigation>
+  <Link link="/" linkTitle="Home" />
+  <Link link="/" linkTitle="About us" />
+  <ButtonLink link="/" linkTitle="Login" />
+</Navigation>
 
-  <section class="notebook-visual">
-    <img class="notebook-visual__image" src="/writing-visual.svg" alt="cddds">
-  </section>
-</article>
+<main>
+  <div class="background">
+    <img class="background-book-holes" src="/book-holes.svg" alt="">
+  </div>
+  
+  <article class="notebook">
+    <section class="notebook-introduction">
+      <h1 class="notebook-introduction__heading">Fight against procrastination!</h1>
+      <p>The purpose of this website is to get more discipline to write. You can choose challenges for your documents to get you in the right mindspace and get your work done. Create a document with a challenge when you're interested. Good luck!</p>
+      <div class="notebook-introduction__button-group">
+        <ButtonLink link="/documents" linkTitle="Let's write" />
+        <ButtonLink linkColor="blue" link="/" linkTitle="More information" />
+      </div>
+      <div class="notebook-lazy">
+        <h2>Too lazy to login?</h2>
+        <p class="notebook-lazy__paragraph">You can write and download a document here. But keep in mind you cannot save your document when you are not logged in.</p>
+        <ButtonLink link="/lazy" linkTitle="Write here" />
+      </div>
+    </section>
+  
+    <section class="notebook-visual">
+      <img class="notebook-visual__image" src="/writing-visual.svg" alt="cddds">
+    </section>
+  </article>
+</main>
 
 <style>
   .notebook {
@@ -32,23 +46,23 @@
   .notebook-introduction {
     padding: 3em;
     background-color: var(--white);
-    border-top: 10px solid var(--brown);
+    border-top: 12px solid var(--brown);
     border-right: 7px solid var(--brown);
-    border-bottom: 10px solid var(--brown);
-    border-left: 10px solid var(--brown);
+    border-bottom: 12px solid var(--brown);
+    border-left: 12px solid var(--brown);
     border-radius: 1em;
   }
 
   .notebook-introduction__heading {
-    margin-bottom: .4em;
+    margin-bottom: .25em;
   }
 
   .notebook-visual {
     padding: 3em;
     background-color: var(--white);
-    border-top: 10px solid var(--brown);
-    border-right: 10px solid var(--brown);
-    border-bottom: 10px solid var(--brown);
+    border-top: 12px solid var(--brown);
+    border-right: 12px solid var(--brown);
+    border-bottom: 12px solid var(--brown);
     border-left: 7px solid var(--brown);
     border-radius: 1em;
     display: flex;
@@ -65,14 +79,15 @@
     margin-top: 2em;
     padding: 2em;
     background-color: var(--light-blue);
+    border-radius: 1em;
   }
 
   .notebook-lazy__paragraph {
     margin-bottom: .75em;
   }
 
-  .notebook-introduction-background {
-    top: 25%;
+  .background-book-holes {
+    top: 35%;
     position: absolute;
   }
 
@@ -80,7 +95,7 @@
     width: 100%;
   }
 
-  .p {
+  .background {
     display: flex;
     justify-content: center;
   }

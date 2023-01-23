@@ -54,7 +54,7 @@
 <path d="M64.9014 306.453L162.863 306.453" stroke="black" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="30 8 12 4"/>
 <path d="M64.9014 353.526H113.007" stroke="black" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="30 8 12 4"/>
 <path d="M64.9014 341.322L135.748 341.322" stroke="black" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="30 8 12 4"/>
-<path d="M134.208 332.869H208.495C211.532 332.869 213.995 335.332 213.995 338.369V379.321V403.464C213.995 406.502 211.532 408.964 208.495 408.964H178.791H134.208C131.17 408.964 128.708 406.502 128.708 403.464V338.369C128.708 335.332 131.17 332.869 134.208 332.869Z" fill="#F2F3F9" stroke="#A3684A" stroke-width="3"/>
+<path d="M128.708 338.369C128.708 335.332 131.17 332.869 134.208 332.869H208.495C211.532 332.869 213.995 335.332 213.995 338.369V379.321V403.464C213.995 406.502 211.532 408.964 208.495 408.964H178.791H134.208C131.17 408.964 128.708 406.502 128.708 403.464V338.369Z" fill="#F2F3F9" stroke="#A3684A" stroke-width="3"/>
 <path d="M127.208 338.369C127.208 334.503 130.342 331.369 134.208 331.369H208.495C212.361 331.369 215.495 334.503 215.495 338.369V351.143H127.208V338.369Z" fill="#A3684A"/>
 <rect x="142.087" y="321.483" width="8.92793" height="21.751" rx="4" fill="black"/>
 <rect x="166.887" y="321.483" width="8.92793" height="21.751" rx="4" fill="black"/>

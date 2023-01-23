@@ -1,6 +1,9 @@
 :root {
   --light-blue: #CFD3E9;
+  --dark-blue: #848899;
   --red: #5C2A32;
+  --brown: #A3684A;
+  --dark-brown: #7F523A;
   --brown: #A3684A;
   --black: #F2F3F9;
   --black: #000;
@@ -41,40 +44,6 @@ h2 {
 }
 
 p {
-  font-size: 1.5rem;
+  font-size: 1.1875rem;
   line-height: 1.5;
-}
-
-.button--red {
-  padding: 1em;
-  color: var(--white);
-  font-weight: 600;
-  text-decoration: none;
-  text-transform: uppercase;
-  background: var(--red);
-  border-radius: 10px;
-  display: block;
-  width: max-content;
-}
-
-.button--red:hover {
-  transition: 1s transform;
-  transform: translateY(-.35em);
-}
-
-.button--blue {
-  padding: 1em;
-  color: var(--black);
-  font-weight: 600;
-  text-decoration: none;
-  text-transform: uppercase;
-  background: var(--light-blue);
-  border-radius: 10px;
-  display: block;
-  width: max-content;
-}
-
-.button--blue:hover {
-  transition: 1s transform;
-  transform: translateY(-.35em);
 }
