@@ -1,11 +1,11 @@
 <script>
-// @ts-nocheck
-import Navigation from '$lib/components/Navigation.svelte'
-import Link from '$lib/components/Link.svelte';
-import ButtonLink from '$lib/components/ButtonLink.svelte';
-import Button from '$lib/components/Button.svelte';
+  // @ts-nocheck
+  import Navigation from '$lib/components/Navigation.svelte'
+  import Link from '$lib/components/Link.svelte';
+  import ButtonLink from '$lib/components/ButtonLink.svelte';
+  import Button from '$lib/components/Button.svelte';
 
-let editor;
+  let editor;
   let wordCount = 0;
 
   function handleBold() {
