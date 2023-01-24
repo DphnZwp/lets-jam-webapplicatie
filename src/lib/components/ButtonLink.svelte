@@ -10,6 +10,7 @@
   .red {
   padding: 1em;
   color: var(--white);
+  font-size: 1.1875rem;
   font-weight: 600;
   text-decoration: none;
   text-transform: uppercase;
@@ -27,6 +28,7 @@
 .blue {
   padding: 1em;
   color: var(--black);
+  font-size: 1.1875rem;
   font-weight: 600;
   text-decoration: none;
   text-transform: uppercase;

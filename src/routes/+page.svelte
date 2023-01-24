@@ -7,7 +7,7 @@
 <Navigation>
   <Link link="/" linkTitle="Home" />
   <Link link="/" linkTitle="About us" />
-  <ButtonLink link="/" linkTitle="Login" />
+  <ButtonLink link="/login" linkTitle="Login" />
 </Navigation>
 
 <main>
@@ -20,7 +20,7 @@
       <h1 class="notebook-introduction__heading">Fight against procrastination!</h1>
       <p>The purpose of this website is to get more discipline to write. You can choose challenges for your documents to get you in the right mindspace and get your work done. Create a document with a challenge when you're interested. Good luck!</p>
       <div class="notebook-introduction__button-group">
-        <ButtonLink link="/documents" linkTitle="Let's write" />
+        <ButtonLink link="/login" linkTitle="Let's write" />
         <ButtonLink linkColor="blue" link="/" linkTitle="More information" />
       </div>
       <div class="notebook-lazy">
