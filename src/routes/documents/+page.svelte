@@ -1,10 +1,12 @@
 <script lang="ts">
-  import Story from '$lib/components/Story.svelte';
+  import Document from '$lib/components/Document.svelte';
+  import List from '$lib/components/List.svelte';
+  import ListItem from '$lib/components/ListItem.svelte';
   import Navigation from '$lib/components/Navigation.svelte'
   import Link from '$lib/components/Link.svelte';
   import ButtonLink from '$lib/components/ButtonLink.svelte'
-  // import type { PageData } from './$types';
-	// export let data: PageData;
+  export let data;
+  let documents = data.documents;
 </script>
 
 <Navigation>
@@ -30,9 +32,16 @@
   </section>
   
   <section class="overview">
-    <Story storyTitle="Dutch report" />
-    <Story storyTitle="Learning english fo..." />
-    <Story storyTitle="The angry witch" />
+    {#each documents as document}
+      <Document storyTitle="{document.title}">
+        <List>
+          <ListItem listTitle="Author:" listText="{document.author}"/>
+          <ListItem listTitle="Deadline:" listText="{document.deadline}"/>
+          <ListItem listTitle="Challenge:" listText="{document.challenge}"/>
+          <ListItem listTitle="Words:" listText="748/{document.words}"/>
+        </List>
+      </Document>
+    {/each}
   </section>
 </main>
 
