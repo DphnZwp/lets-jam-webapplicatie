@@ -5,22 +5,26 @@
   import Navigation from '$lib/components/Navigation.svelte'
   import Link from '$lib/components/Link.svelte';
   import ButtonLink from '$lib/components/ButtonLink.svelte'
-  import Button from '$lib/components/Button.svelte';
   export let data;
-  console.log(data);
   
   let documents = data.documents;
-  let itemsPerDocument = 3;
-  let currentDocument = 0;
-  const nextDocument = () => {
-    currentDocument = (currentDocument + 1) % (Math.ceil(documents.length / itemsPerDocument));
+  let documentsNumber= documents.length
+
+  let currentPage = 1;
+  let itemsPerPage = 4;
+  let pages = Math.ceil(documents.length / itemsPerPage);
+  let windowSize = 5;  // number of buttons to display at a time
+  
+  function handlePageChange(newPage) {
+    currentPage = newPage;
   }
-  const prevDocument = () => {
-    if (currentDocument != 0) {
-      currentDocument = (currentDocument - 1) % (Math.ceil(documents.length / itemsPerDocument));
-    } else {
-      currentDocument = Math.ceil(documents.length / itemsPerDocument) - 1;
-    }
+
+  function handleFirstPage() {
+    currentPage = 1;
+  }
+
+  function handleLastPage() {
+    currentPage = pages;
   }
 </script>
 
@@ -33,7 +37,7 @@
   <section class="introduction-documents">
     <h1>Your documents</h1>
     <p class="introduction-documents__paragraph ">
-      You have 75 documents. Let's write a new one
+      You have {documentsNumber} documents. Let's write a new one
       <svg width="48" height="37" viewBox="0 0 48 37" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M24 37C35.598 37 45 28.7173 45 18.5C45 8.28273 35.598 0 24 0C12.402 0 3 8.28273 3 18.5C3 28.7173 12.402 37 24 37Z" fill="black"/>
         <path d="M4 12L3.50001 12.2182C1.64286 13.2364 0 15.3455 0 18.0364C0 20.6545 1.57143 22.7636 3.42858 23.7818L3.85716 24" fill="black"/>
@@ -47,7 +51,7 @@
   </section>
   
   <section class="overview">
-    {#each documents.slice(currentDocument * itemsPerDocument, (currentDocument + 1) * itemsPerDocument) as document}
+    {#each documents.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage) as document}
       <Document storyTitle="{document.title}">
         <List>
           <ListItem listTitle="Author:" listText="{document.author}"/>
@@ -59,14 +63,19 @@
     {/each}
   </section>
   <section class="overview__pagination">
-    <button
-      class="btn btn--blue btn--left"
-      on:click={() => prevDocument()}>Previous</button
-    >
-    <button
-      class="btn btn--blue btn--right"
-      on:click={() => nextDocument()}>Next</button
-    >
+   {#if pages !== 1}
+    <button class="pagination-button" on:click={handleFirstPage}>First</button>
+    <button class="pagination-button" on:click={() => handlePageChange(currentPage - windowSize)}>Previous</button>
+  {/if}
+  {#each Array.from({length: pages}).map((_, i) => i + 1) as page}
+    {#if page >= currentPage - (windowSize - 1)/2 && page <= currentPage + (windowSize - 1)/2}
+      <button on:click={() => handlePageChange(page)}>{page}</button>
+    {/if}
+  {/each}
+  {#if pages !== 1}
+    <button class="pagination-button" on:click={() => handlePageChange(currentPage + windowSize)}>Next</button>
+    <button class="pagination-button" on:click={handleLastPage}>Last</button>
+  {/if}
   </section>
 </main>
 
@@ -90,16 +99,30 @@
   .overview {
     padding: 3em;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     gap: 3em;
     background-color: var(--brown);
-    border-radius: 1em;
+    border-radius: 1em 1em 0 0;
   }
 
   .overview__pagination {
+    padding: 1em;
     display: flex;
     justify-content: center;
     background-color: var(--dark-brown);
     width: 100%;
+    border-radius: 0 0 1em 1em;
+  }
+
+  @media(min-width: 70em) {
+    .overview {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+    @media(min-width: 80em) {
+    .overview {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
 </style>

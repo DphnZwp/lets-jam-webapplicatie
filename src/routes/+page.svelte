@@ -39,7 +39,7 @@
 <style>
   .notebook {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     gap: .5em;
   }
 
@@ -87,8 +87,9 @@
   }
 
   .background-book-holes {
-    top: 35%;
+    top: 30%;
     position: absolute;
+    display: none;
   }
 
   .notebook-visual__image {
@@ -98,5 +99,75 @@
   .background {
     display: flex;
     justify-content: center;
+  }
+
+  @media (min-width: 60em) {
+    .notebook-introduction {
+    padding: 10em;
+    background-color: var(--white);
+    border-top: 12px solid var(--brown);
+    border-right: 7px solid var(--brown);
+    border-bottom: 12px solid var(--brown);
+    border-left: 12px solid var(--brown);
+    border-radius: 1em;
+  }
+
+  .notebook-visual {
+    padding: 10em;
+    background-color: var(--white);
+    border-top: 12px solid var(--brown);
+    border-right: 12px solid var(--brown);
+    border-bottom: 12px solid var(--brown);
+    border-left: 7px solid var(--brown);
+    border-radius: 1em;
+    display: flex;
+    align-items: center;
+  }
+  }
+
+  @media (min-width: 80em) {
+    .notebook {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: .5em;
+  }
+
+  .notebook-introduction {
+    padding: 3em;
+    background-color: var(--white);
+    border-top: 12px solid var(--brown);
+    border-right: 7px solid var(--brown);
+    border-bottom: 12px solid var(--brown);
+    border-left: 12px solid var(--brown);
+    border-radius: 1em;
+  }
+
+  .notebook-visual {
+    padding: 3em;
+    background-color: var(--white);
+    border-top: 12px solid var(--brown);
+    border-right: 12px solid var(--brown);
+    border-bottom: 12px solid var(--brown);
+    border-left: 7px solid var(--brown);
+    border-radius: 1em;
+    display: flex;
+    align-items: center;
+  }
+  }
+
+  @media (min-width: 95em) {
+  .background-book-holes {
+    display: block;
+  }
+  }
+
+  @media (min-width: 100em) {
+    .notebook-introduction {
+      padding: 5em;
+    }
+
+    .notebook-visual {
+      padding: 5em;
+    }
   }
 </style>
