@@ -38,8 +38,8 @@
           <ListItem listTitle="Author:" listText="{document.author}"/>
           <ListItem listTitle="Deadline:" listText="{document.deadline}"/>
           <ListItem listTitle="Challenge:" listText="{document.challenge}"/>
-          <ListItem listTitle="Words:" listText="748/{document.words}"/>
         </List>
+        <ButtonLink link="/document/{document.slug}" linkTitle="Continue writing" />
       </Document>
     {/each}
   </section>

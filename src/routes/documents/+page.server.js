@@ -16,6 +16,7 @@ export async function load() {
       challenge
       deadline
       words
+      slug
     }
   }
   `;

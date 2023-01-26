@@ -22,7 +22,7 @@
 
 .red:hover {
   transition: 1s transform;
-  transform: translateY(-.35em);
+  transform: translateY(-.25em);
 }
 
 .blue {
@@ -40,7 +40,7 @@
 
 .blue:hover {
   transition: 1s transform;
-  transform: translateY(-.35em);
+  transform: translateY(-.25em);
 }
 </style>
 

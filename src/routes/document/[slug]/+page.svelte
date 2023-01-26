@@ -1,5 +1,4 @@
 <script>
-  // @ts-nocheck
   import Button from '$lib/components/Button.svelte';
 
   let editor;
@@ -7,7 +6,7 @@
 
 
   export let data;
-  console.log(data);
+	const document = data.data
 
   function handleBold() {
     document.execCommand("bold", false, null);
@@ -28,7 +27,7 @@
 
 <main class="no-padding">
   <section class="lazy-introduction">
-    <h1>{data.title}</h1>
+    <h1>{document.title}</h1>
   </section>
 
   <section class="word-counter">

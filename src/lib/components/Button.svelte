@@ -1,7 +1,7 @@
 <script lang="ts">
   export let buttonTitle: string;
   export let buttonColor: string = 'red';
-  export let buttonType: undefined;
+  export let buttonType: any = 'button';
 </script>
 
 <button type="{buttonType}" class="{buttonColor}">{buttonTitle}</button>
@@ -24,6 +24,6 @@
 
 .red:hover {
   transition: 1s transform;
-  transform: translateY(-.35em);
+  transform: translateY(-.25em);
 }
 </style>

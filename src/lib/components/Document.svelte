@@ -1,14 +1,12 @@
 <script lang="ts">
   import List from '$lib/components/List.svelte';
   import ListItem from '$lib/components/ListItem.svelte';
-  import ButtonLink from '$lib/components/ButtonLink.svelte'
   export let storyTitle: string;
 </script>
 
 <article class="overview-story">
   <h2>{storyTitle}</h2>
   <slot />
-  <ButtonLink link="/" linkTitle="Continue writing" />
 </article>
 
 <style>

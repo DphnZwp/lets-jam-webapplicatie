@@ -1,5 +1,4 @@
 <script>
-  // @ts-nocheck
   import Navigation from '$lib/components/Navigation.svelte'
   import Link from '$lib/components/Link.svelte';
   import ButtonLink from '$lib/components/ButtonLink.svelte';

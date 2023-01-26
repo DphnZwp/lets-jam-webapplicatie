@@ -10,8 +10,6 @@ export async function load({ params }) {
 	query Documents($slug: String!) {
     document(where: { slug: $slug })  {
       title
-			slug
-			id
     }
   }
 	`
@@ -20,10 +18,6 @@ export async function load({ params }) {
 		slug: params.slug,
 	}
 
-	const { data } = await hygraph.request(query, variables)
-
-	return {
-			data
-	}
+	const data = await hygraph.request(query, variables)
+	return {data: data.document}
 }
-
