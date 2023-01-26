@@ -1,12 +1,10 @@
 <script>
+   import Navigation from '$lib/components/Navigation.svelte'
+  import Link from '$lib/components/Link.svelte';
   import Button from '$lib/components/Button.svelte';
-
-  let editor;
-  let wordCount = 0;
-
-
   export let data;
-	const document = data.data
+  let editor;
+  let wordCounter = 0;
 
   function handleBold() {
     document.execCommand("bold", false, null);
@@ -21,17 +19,22 @@
   }
 
   function updateWordCount() {
-    wordCount = editor.innerText.trim().split(" ").filter((item) => item).length;
+    wordCounter = editor.innerText.trim().split(" ").filter((item) => item).length;
   }
 </script>
 
+<Navigation>
+  <Link link="/" linkTitle="Home" />
+  <Link link="/documents" linkTitle="Documents" />
+</Navigation>
+
 <main class="no-padding">
-  <section class="lazy-introduction">
-    <h1>{document.title}</h1>
+  <section class="introduction">
+    <h1>{data.data.title}</h1>
   </section>
 
   <section class="word-counter">
-    <p>Words: {wordCount}/100</p>
+    <p>Words: {wordCounter}/{data.data.words}</p>
   </section>
 
   <section class="text-decoration">
@@ -53,7 +56,7 @@
       </button>
   </section>
   
-  <section class="lazy-writing">
+  <section class="writing">
     <Button buttonTitle="Download pdf" />
     <div class="rich-text-input" contenteditable="true" on:input={updateWordCount} bind:this={editor}></div>
   </section>
@@ -64,7 +67,7 @@
     padding: 0;
   }
 
-  .lazy-introduction {
+  .introduction {
     padding: 4em;
     text-align: center;
     display: grid;
@@ -96,7 +99,7 @@
     cursor: pointer;
   }
 
-  .lazy-writing {
+  .writing {
     padding: 2em 5em 5em 5em;
     display: grid;
     justify-items: right;

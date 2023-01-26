@@ -30,7 +30,7 @@
 
 <Navigation>
   <Link link="/" linkTitle="Home" />
-  <Link link="/" linkTitle="Documents" />
+  <Link link="/documents" linkTitle="Documents" />
 </Navigation>
 
 <main>

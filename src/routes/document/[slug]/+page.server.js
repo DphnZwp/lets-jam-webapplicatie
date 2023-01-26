@@ -10,6 +10,7 @@ export async function load({ params }) {
 	query Documents($slug: String!) {
     document(where: { slug: $slug })  {
       title
+			words
     }
   }
 	`

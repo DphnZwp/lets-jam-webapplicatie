@@ -1,5 +1,9 @@
 <script>
-  // @ts-nocheck
+  import Navigation from '$lib/components/Navigation.svelte'
+  import Link from '$lib/components/Link.svelte';
+  import ButtonLink from '$lib/components/ButtonLink.svelte';
+  import Button from '$lib/components/Button.svelte';
+
   let email;
   let password;
   let errorMessage = '';
@@ -23,17 +27,83 @@
   }
 </script>
 
-<form on:submit|preventDefault={handleSubmit}>
-  <div>
-    <label for="email">Email</label>
-    <input id="email" bind:this={email} type="email" required>
-  </div>
-  <div>
-    <label for="password">Password</label>
-    <input id="password" bind:this={password} type="password" required>
-  </div>
-  <button type="submit">
-		Submit
-  </button>
-  <div>{errorMessage}</div>
-</form>
+<Navigation>
+  <Link link="/" linkTitle="Home" />
+  <Link link="/" linkTitle="About us" />
+  <ButtonLink link="/login" linkTitle="Login" />
+</Navigation>
+
+<main>
+  <section class="login-introduction">
+    <h1>Login</h1>
+  </section>
+
+  <section class="login">
+    <form on:submit|preventDefault={handleSubmit}>
+      <h2>Welcome back!</h2>
+      <div>
+        <label for="email">Email</label>
+        <input id="email" bind:this={email} type="email" required>
+      </div>
+      <div>
+      <label for="password">Password</label>
+      <input id="password" bind:this={password} type="password" required>
+      </div>
+      <Button buttonType="submit" buttonTitle="Login" />
+      <div>{errorMessage}</div>
+    </form>
+  
+    <section class="login-visual">
+      <h2>Don't have an account yet?</h2>
+      <p class="login-visual__paragraph">Make an account! <Link link="/login" linkTitle="Sign up" /></p>
+      <img src="/robot-form.png" alt="Robot filling in form">
+    </section>
+  </section>
+</main>
+
+<style>
+  .login-introduction {
+    padding-bottom: 4em;
+    text-align: center;
+  }
+
+  .login {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3em;
+  }
+
+  form {
+    padding: 2em;
+    background-color: var(--white);
+    border-radius: 1em;
+  }
+
+  form>h2 {
+    margin-bottom: .5em;
+  }
+
+  div {
+    margin-bottom: 1.5em;
+    display: flex;
+    flex-direction: column;
+  }
+
+  input {
+    margin-top: .5em;
+    font-size: 1.1875rem;
+    padding: .5em;
+    background-color: var(--light-blue);
+    border: none;
+  }
+
+  .login-visual {
+    padding: 2em;
+    background-color: var(--white);
+    border-radius: 1em;
+  }
+
+  .login-visual__paragraph {
+    margin-bottom: 1em;
+  }
+</style>
