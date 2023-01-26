@@ -5,8 +5,23 @@
   import Navigation from '$lib/components/Navigation.svelte'
   import Link from '$lib/components/Link.svelte';
   import ButtonLink from '$lib/components/ButtonLink.svelte'
+  import Button from '$lib/components/Button.svelte';
   export let data;
+  console.log(data);
+  
   let documents = data.documents;
+  let itemsPerDocument = 3;
+  let currentDocument = 0;
+  const nextDocument = () => {
+    currentDocument = (currentDocument + 1) % (Math.ceil(documents.length / itemsPerDocument));
+  }
+  const prevDocument = () => {
+    if (currentDocument != 0) {
+      currentDocument = (currentDocument - 1) % (Math.ceil(documents.length / itemsPerDocument));
+    } else {
+      currentDocument = Math.ceil(documents.length / itemsPerDocument) - 1;
+    }
+  }
 </script>
 
 <Navigation>
@@ -32,16 +47,26 @@
   </section>
   
   <section class="overview">
-    {#each documents as document}
+    {#each documents.slice(currentDocument * itemsPerDocument, (currentDocument + 1) * itemsPerDocument) as document}
       <Document storyTitle="{document.title}">
         <List>
           <ListItem listTitle="Author:" listText="{document.author}"/>
-          <ListItem listTitle="Deadline:" listText="{document.deadline}"/>
+          <ListItem listTitle="Deadline:" listText="{new Date(document.deadline).toLocaleDateString("en-GB", { day: "numeric", month: "numeric", year: "numeric" })}"/>
           <ListItem listTitle="Challenge:" listText="{document.challenge}"/>
         </List>
         <ButtonLink link="/document/{document.slug}" linkTitle="Continue writing" />
       </Document>
     {/each}
+  </section>
+  <section class="overview__pagination">
+    <button
+      class="btn btn--blue btn--left"
+      on:click={() => prevDocument()}>Previous</button
+    >
+    <button
+      class="btn btn--blue btn--right"
+      on:click={() => nextDocument()}>Next</button
+    >
   </section>
 </main>
 
@@ -69,5 +94,12 @@
     gap: 3em;
     background-color: var(--brown);
     border-radius: 1em;
+  }
+
+  .overview__pagination {
+    display: flex;
+    justify-content: center;
+    background-color: var(--dark-brown);
+    width: 100%;
   }
 </style>
