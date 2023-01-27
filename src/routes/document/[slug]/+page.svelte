@@ -2,10 +2,9 @@
    import Navigation from '$lib/components/Navigation.svelte'
   import Link from '$lib/components/Link.svelte';
   import Button from '$lib/components/Button.svelte';
-  export let data;
-  const document = data.data;
   let editor;
   let wordCounter = 0;
+  export let data;
 
   function handleBold() {
     document.execCommand("bold", false, null);
@@ -31,11 +30,11 @@
 
 <main class="no-padding">
   <section class="introduction">
-    <h1>{document.title}</h1>
+    <h1>{data.data.title}</h1>
   </section>
 
   <section class="word-counter">
-    <p>Words: {wordCounter}/{document.words}</p>
+    <p>Words: {wordCounter}/{data.data.words}</p>
   </section>
 
   <section class="text-decoration">
