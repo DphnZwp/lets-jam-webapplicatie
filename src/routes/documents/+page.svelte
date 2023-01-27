@@ -11,7 +11,7 @@
   let documentsNumber= documents.length
 
   let currentPage = 1;
-  let itemsPerPage = 4;
+  let itemsPerPage = 3;
   let pages = Math.ceil(documents.length / itemsPerPage);
   let windowSize = 5;  // number of buttons to display at a time
   
@@ -112,12 +112,6 @@
     background-color: var(--dark-brown);
     width: 100%;
     border-radius: 0 0 1em 1em;
-  }
-
-  @media(min-width: 70em) {
-    .overview {
-      grid-template-columns: repeat(2, 1fr);
-    }
   }
 
     @media(min-width: 80em) {

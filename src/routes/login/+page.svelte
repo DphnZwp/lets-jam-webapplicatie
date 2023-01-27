@@ -56,7 +56,9 @@
     <section class="login-visual">
       <h2>Don't have an account yet?</h2>
       <p class="login-visual__paragraph">Make an account! <Link link="/login" linkTitle="Sign up" /></p>
-      <img src="/robot-form.png" alt="Robot filling in form">
+      <div class="login-visual img--center">
+        <img src="/robot-form.png" alt="Robot filling in form">
+      </div>
     </section>
   </section>
 </main>
@@ -69,7 +71,7 @@
 
   .login {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     gap: 3em;
   }
 
@@ -101,9 +103,23 @@
     padding: 2em;
     background-color: var(--white);
     border-radius: 1em;
+    display: grid;
   }
 
   .login-visual__paragraph {
     margin-bottom: 1em;
+  }
+
+  .img--center {
+    display: grid;
+    justify-content: center;
+  }
+
+  @media (min-width: 80em) {
+    .login {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3em;
+  }
   }
 </style>
