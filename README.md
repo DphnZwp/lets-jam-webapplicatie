@@ -7,7 +7,7 @@ De instructie vind je in: [docs/INSTRUCTIONS.md](docs/INSTRUCTIONS.md)
 
 The purpose of this website is to get more discipline to write. You can choose challenges for your documents to get you in the right mindspace and get your work done. You can use the app for writing books, homework or other projects where you need to write.
 
-
+![lets-jam-webapplicatie-eight vercel app_](https://user-images.githubusercontent.com/69635977/216783158-d2aa202a-d2a3-4a8a-a8b6-1d8a408663ee.png)
 
 ## Inhoudsopgave
 
